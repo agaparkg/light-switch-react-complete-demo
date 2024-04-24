@@ -13,14 +13,14 @@ Currently, two official plugins are available:
 
 ### Option 1: Turn on and off buttons (with hover effects)
 
-![off](./images/hover.png)
+![off](./src/assets/hover.png)
 
 ### Option 2: Single on/off button
 
 ### Switch OFF
 
-![off](./images/ui-off.png)
+![off](./src/assets/ui-off.png)
 
 ### Switch ON
 
-![off](./images/ui-on.png)
+![off](./src/assets/ui-on.png)
