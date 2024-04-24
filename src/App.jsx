@@ -1,10 +1,10 @@
-// import { useState } from "react";
 import "./App.css";
 
-function App() {
-  // const [count, setCount] = useState(0);
+// Light on: https://learn.seytech.co/assets/projects/js/dom-projects/light-switch/lighton.png
+// Light off: https://learn.seytech.co/assets/projects/js/dom-projects/light-switch/lightoff.png
 
-  return <>hello</>;
+function App() {
+  return <div>Light ON/OFF React app</div>;
 }
 
 export default App;
