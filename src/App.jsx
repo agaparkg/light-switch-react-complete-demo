@@ -10,40 +10,26 @@ const lightOn =
 const lightOff =
   "https://learn.seytech.co/assets/projects/js/dom-projects/light-switch/lightoff.png";
 
+// let products = []
+
 function App() {
-  const [imgUrl, setImgUrl] = useState(lightOff); // "https://learn.seytech.co/assets/projects/js/dom-projects/light-switch/lightoff.png"
+  const [isOn, setIsOn] = useState(false);
 
-  const turnOn = () => {
-    setImgUrl(lightOn); // "https://learn.seytech.co/assets/projects/js/dom-projects/light-switch/lighton.png"
+  const toggle = () => {
+    // if (isOn) {
+    //   setIsOn(false);
+    // } else {
+    //   setIsOn(true);
+    // }
+    setIsOn(!isOn);
   };
-
-  const turnOff = () => {
-    setImgUrl(lightOff);
-  };
-
-  // const turnOn = (e) => {
-  //   e.target.previousElementSibling.previousElementSibling.src =
-  //     "https://learn.seytech.co/assets/projects/js/dom-projects/light-switch/lighton.png";
-  //   // document.getElementById("img").src =
-  //   //   "https://learn.seytech.co/assets/projects/js/dom-projects/light-switch/lighton.png";
-  // };
-
-  // const turnOff = (e) => {
-  //   e.target.previousElementSibling.previousElementSibling.previousElementSibling.src =
-  //     "https://learn.seytech.co/assets/projects/js/dom-projects/light-switch/lightoff.png";
-  //   // document.getElementById("img").src =
-  //   //   "https://learn.seytech.co/assets/projects/js/dom-projects/light-switch/lightoff.png";
-  // };
 
   return (
     <>
-      <img id="img" src={imgUrl} />
+      <img id="img" src={isOn ? lightOn : lightOff} />
       <br />
-      <button id="btn1" onClick={turnOn}>
-        Turn on
-      </button>
-      <button id="btn2" onClick={turnOff}>
-        Turn off
+      <button className={!isOn ? "on" : "off"} id="btn1" onClick={toggle}>
+        {isOn ? "OFF" : "ON"}
       </button>
     </>
   );
